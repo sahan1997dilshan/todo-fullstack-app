@@ -19,11 +19,6 @@ function TaskForm({ refresh }) {
 
     return (
         <div>
-            {/* <input
-                placeholder="Title"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-            /> */}
             <h2 className="form-title">Add a Task</h2>
             <input
                 className="form-input"
@@ -31,11 +26,7 @@ function TaskForm({ refresh }) {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
             />
-            {/* <input
-                placeholder="Description"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-            /> */}
+            
             <textarea
                 className="form-textarea"
                 placeholder="Description"
@@ -43,7 +34,7 @@ function TaskForm({ refresh }) {
                 onChange={(e) => setDescription(e.target.value)}
             />
             <div style={{ textAlign: 'right' }}>
-                <button onClick={submit}>Add Task</button>
+                <button  className="add-button" onClick={submit}>Add</button>
             </div>
         </div>
     );

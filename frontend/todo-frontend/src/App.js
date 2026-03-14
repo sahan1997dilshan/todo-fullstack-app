@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="page-container">
-      <div>
+      <div className='form-section'>
         <TaskForm refresh={() => window.location.reload()} />
       </div>
       <div className="divider"></div>
