@@ -8,10 +8,12 @@ function TaskCard({task, refresh}){
  }
 
  return(
-   <div className="card">
-      <h3>{task.title}</h3>
+   <div className="task-card">
+      <div className="task-content">
+        <h3>{task.title}</h3>
       <p>{task.description}</p>
-      <button onClick={done}>Done</button>
+      </div>
+      <button className="done-button" onClick={done}>Done</button>
    </div>
  )
 }

@@ -3,37 +3,50 @@ import { createTask } from "../api";
 
 function TaskForm({ refresh }) {
 
- const [title,setTitle] = useState("");
- const [description,setDescription] = useState("");
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
 
- const submit = async () =>{
-   await createTask({
-    title,
-    description,
-    completed:false
-});
-   setTitle("");
-   setDescription("");
-   refresh();
- }
+    const submit = async () => {
+        await createTask({
+            title,
+            description,
+            completed: false
+        });
+        setTitle("");
+        setDescription("");
+        refresh();
+    }
 
- return (
-   <div>
-     <input
-       placeholder="Title"
-       value={title}
-       onChange={(e)=>setTitle(e.target.value)}
-     />
-
-     <input
-       placeholder="Description"
-       value={description}
-       onChange={(e)=>setDescription(e.target.value)}
-     />
-
-     <button onClick={submit}>Add Task</button>
-   </div>
- );
+    return (
+        <div>
+            {/* <input
+                placeholder="Title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+            /> */}
+            <h2 className="form-title">Add a Task</h2>
+            <input
+                className="form-input"
+                placeholder="Title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+            />
+            {/* <input
+                placeholder="Description"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+            /> */}
+            <textarea
+                className="form-textarea"
+                placeholder="Description"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+            />
+            <div style={{ textAlign: 'right' }}>
+                <button onClick={submit}>Add Task</button>
+            </div>
+        </div>
+    );
 }
 
 export default TaskForm;

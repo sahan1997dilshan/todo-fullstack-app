@@ -1,15 +1,22 @@
+import './App.css';
+
 import TaskForm from "./component/TaskForm";
 import TaskList from "./component/TaskList";
 
-function App(){
+function App() {
 
- return(
-   <div>
-     <h1>Todo App</h1>
-     <TaskForm refresh={()=>window.location.reload()} />
-     <TaskList/>
-   </div>
- )
+  return (
+    <div className="page-container">
+      <div>
+        <TaskForm refresh={() => window.location.reload()} />
+      </div>
+      <div className="divider"></div>
+      <div className="list-section">
+        <TaskList />
+      </div>
+
+    </div>
+  )
 
 }
 
