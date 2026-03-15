@@ -72,3 +72,8 @@
   cursor: pointer;
   width: 15%;
 }
+
+.error-text {
+  color: red;
+  font-size: 12px;
+}
